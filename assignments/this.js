@@ -33,6 +33,15 @@ console.log(johnson.speak());
 // Principle 3
 
 // code example for New Binding
+function Laptop(name, os) {
+    this.os = os
+    this.name = name;
+    this.intro = function() {
+        return `Hello welcome to ${name}, i run on ${os}`;
+    }
+}
+const samsung = new Laptop('samsung', 'windows');
+console.log(samsung.intro());
 
 // Principle 4
 
