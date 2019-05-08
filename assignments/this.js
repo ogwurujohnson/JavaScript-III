@@ -20,6 +20,15 @@ console.log(bark('woof woof'));
 // Principle 2
 
 // code example for Implicit Binding
+const johnson = {
+    name: 'Johnson',
+    nickname: 'Johnny',
+    speak() {
+        return `Hi, i am ${this.name}, but my friends call me ${this.nickname}`;
+    },
+}
+
+console.log(johnson.speak());
 
 // Principle 3
 
