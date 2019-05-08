@@ -46,3 +46,15 @@ console.log(samsung.intro());
 // Principle 4
 
 // code example for Explicit Binding
+function Laptop(name, os) {
+    this.os = os
+    this.name = name;
+    this.intro = function() {
+        return `Hello welcome to ${name}, i run on ${os}`;
+    }
+}
+const macbook = new Laptop('mackbook pro', 'ios');
+const laptopExchange  = macbook.intro;
+console.log(laptopExchange.call(macbook));
+// or
+console.log(laptopExchange.apply(macbook));
