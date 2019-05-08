@@ -149,24 +149,28 @@ Humanoid.prototype.greet = function() {
 
 // villian constructor function
   function Villian(villianAttribute) {
-    this.removeHealthPoints = function() {
-      this.healthPoints = this.healthPoints - 3;
-      if(healthPoints <= 0) {
-        return this.destroy();
-      } else {
-          return this.takeDamage();
-      }
-    }
     Humanoid.call(this, villianAttribute);
   }
   Villian.prototype = Object.create(Humanoid.prototype);
 
-  // const nabeelah = new Villian();
-  // console.log(nabeelah);
+  Villian.prototype.removeHealthPoints = function() {
+    --this.healthPoints;
+    if(this.healthPoints <= 0) {
+      console.log(`Remaining points- ${this.healthPoints}`);
+      return this.destroy();
+    } else {
+      console.log(`Remaining points- ${this.healthPoints}`);
+        return this.takeDamage();
+    }
+}
+
+const melvin = new Villian({healthPoints: 3, name: 'melvin'});
+console.log(melvin.removeHealthPoints());
+console.log(melvin.removeHealthPoints());
+console.log(melvin.removeHealthPoints());
 
   // hero constructor function
   function Hero(heroAttributes) {
-    this.point = heroAttributes.point;
     Humanoid.call(this, heroAttributes);
   }
   Hero.prototype = Object.create(Humanoid.prototype);
