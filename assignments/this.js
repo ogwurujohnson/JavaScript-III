@@ -12,7 +12,11 @@
 // Principle 1
 
 // code example for Window Binding
-
+function bark(sound) {
+    console.log(this);
+    return sound;
+}
+console.log(bark('woof woof'));
 // Principle 2
 
 // code example for Implicit Binding
