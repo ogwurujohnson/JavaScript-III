@@ -2,9 +2,16 @@
 * in your own words. explain the four principle for the "this" keyword below.
 *
 * 1. window/global object binding
+       * - this principle implies that the 'this' keyword refers to the global object
+       * when it is used inside the global scope
 * 2. implicit binding
+        * - this priniciple implies that the 'this' keyword refers to the object where its been used.
+        * and it occurs when dot notation is used to invoke a function.
 * 3. new binding
+        * - Here the 'this' keyword refers to any object created due to the invocation of a constructor function
 * 4. explicit binding
+        * - Explicit binding of 'this' occurs when .call(), .apply(), or .bind() are used on a function.
+        * explicit because you are explicitly passing in a 'this' context to call() or apply().
 *
 * write out a code example of each explanation above
 */
